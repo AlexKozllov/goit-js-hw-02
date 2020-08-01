@@ -1,11 +1,9 @@
 "use strict";
 
 const formatString = function (string) {
-  if (string.length >= 40) {
-    let splitString = string.split("");
-    let sliceSplitString = splitString.slice(0, 40);
-    sliceSplitString.push("...");
-    return sliceSplitString.join("");
+  if (string.length > 40) {
+    let sliceSplitString = string.slice(0, 40);
+    return sliceSplitString + "...";
   } else {
     return string;
   }
